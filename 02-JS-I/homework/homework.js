@@ -40,9 +40,7 @@ function suma(x, y) {
     //convertir un datos en entero.
     x = parseInt(x);
     y = parseInt(y);
-
     resultado = x + y;
-
     return resultado;
 }
 
@@ -53,9 +51,7 @@ function resta(x, y) {
     //convertir un datos en entero.
     x = parseInt(x);
     y = parseInt(y);
-
     resultado = x - y;
-
     return resultado;
 
 }
@@ -67,9 +63,7 @@ function multiplica(x, y) {
     //convertir un datos en entero.
     x = parseInt(x);
     y = parseInt(y);
-
     resultado = x * y;
-
     return resultado;
 
 }
@@ -81,11 +75,8 @@ function divide(x, y) {
     //convertir un datos en entero.
     x = parseInt(x);
     y = parseInt(y);
-
     resultado = x / y;
-
     return resultado;
-
 }
 
 function sonIguales(x, y) {
@@ -104,7 +95,6 @@ function tienenMismaLongitud(str1, str2) {
     // Tu código:
     var s1 = str1.length;
     var s2 = str2.length
-
     if (s1 == s2) {
         return true;
     }
@@ -131,7 +121,6 @@ function mayorQueCincuenta(num) {
         return true;
     }
     return false;
-
 }
 
 function obtenerResto(x, y) {
@@ -139,13 +128,10 @@ function obtenerResto(x, y) {
     // Tu código:
     var respuesta;
     var error = "Colocar datos";
-
     if ((x.parseInt != null) && (y.parseInt != null)) {
         respuesta = x % y;
-
         return respuesta.toString;
     }
-
     return error;
 }
 
@@ -211,7 +197,6 @@ function numeroRandom() {
     //Pista: investigá qué hace el método Math.random()
     var respuesta = Math.floor(Math.random() * 1);
     return respuesta
-
 }
 
 function esPositivo(numero) {
@@ -219,10 +204,8 @@ function esPositivo(numero) {
     //Si el número es positivo, devolver ---> "Es positivo"
     //Si el número es negativo, devolver ---> "Es negativo"
     //Si el número es 0, devuelve false
-
     var repuesta = "No es un numero";
-
-    if (parseInt(numero) === 0) {
+    if (parseInt(numero) == 0) {
         respuesta = "Cero";
         return repuesta
     } else if (parseInt(numero) > 0) {
@@ -277,7 +260,6 @@ function areaDelTriangulo(base, altura) {
     //Desarrolle una función que calcule el área de un triángulo.
     //Escribe tu código aquí
     var repuesta = 0;
-
     respuesta = (base * altura) / 2;
     return repuesta;
 }
@@ -288,7 +270,6 @@ function deEuroAdolar(euro) {
     //como parámetro un número de euros y calcule el cambio en dólares.
     //Escribe tu código aquí
     var repuesta = 0;
-
     respuesta = euro * 1.20;
     return repuesta;
 }
@@ -302,7 +283,6 @@ function esVocal(letra) {
     //Escribe tu código aquí
     var respuesta = "No Es vocal";
     var vocales = new Array["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
-
     if ((letra.length < 2) && (letras != null)) {
         for (i = 0; vocales.length < 10; i++) {
             if (vocales[i] == letra) {
