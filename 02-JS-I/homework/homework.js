@@ -7,7 +7,7 @@ const nuevaString = "Hola mundo :D";
 const nuevoNum = 5;
 
 // Crea una variable booleana:
-const nuevoBool = TRUE;
+const nuevoBool = true;
 
 // Resuelve el siguiente problema matemático:
 const nuevaResta = 10 - 5 === 5;
@@ -16,7 +16,7 @@ const nuevaResta = 10 - 5 === 5;
 const nuevaMultiplicacion = 10 * 4 === 40;
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === 1.05;
+const nuevoModulo = 21 % 5 === 1;
 
 
 // En los próximos 22 problemas, deberás completar la función.
@@ -126,13 +126,8 @@ function mayorQueCincuenta(num) {
 function obtenerResto(x, y) {
     // Obten el resto de la división de "x" entre "y"
     // Tu código:
-    var respuesta;
-    var error = "Colocar datos";
-    if ((x.parseInt != null) && (y.parseInt != null)) {
-        respuesta = x % y;
-        return respuesta.toString;
-    }
-    return error;
+    var respuesta = x % y;
+    return respuesta;
 }
 
 function esPar(num) {
@@ -188,7 +183,8 @@ function redondearNumero(num) {
 function redondearHaciaArriba(num) {
     // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
     // Tu código:
-    var respuesta = Math.round(num);
+    //ceil
+    var respuesta = Math.ceil(num)
     return respuesta;
 }
 
@@ -196,7 +192,7 @@ function numeroRandom() {
     //Generar un número al azar entre 0 y 1 y devolverlo
     //Pista: investigá qué hace el método Math.random()
     var respuesta = Math.floor(Math.random() * 1);
-    return respuesta
+    return respuesta;
 }
 
 function esPositivo(numero) {
@@ -204,25 +200,23 @@ function esPositivo(numero) {
     //Si el número es positivo, devolver ---> "Es positivo"
     //Si el número es negativo, devolver ---> "Es negativo"
     //Si el número es 0, devuelve false
-    var repuesta = "No es un numero";
-    if (parseInt(numero) == 0) {
-        respuesta = "Cero";
-        return repuesta
-    } else if (parseInt(numero) > 0) {
-        respuesta = "Positivo";
-        return respuesta;
-    } else {
-        respuesta = "Negativo";
-        return respuesta;
+    var respuesta = "";
+    if (numero > 0) {
+        return respuesta = "Es positivo";
     }
-    return repuesta;
+    if (numero < 0) {
+        return respuesta = "Es negativo";
+    } else {
+
+    }
+    return false;
 }
 
 function agregarSimboloExclamacion(str) {
     // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
     // Ejemplo: "hello world" pasaría a ser "hello world!"
     // Tu código:
-    return str + "¡";
+    return str.concat("!")
 }
 
 function combinarNombres(nombre, apellido) {
@@ -237,7 +231,7 @@ function obtenerSaludo(nombre) {
     // "Martin" -> "Hola Martin!"
     // Tu código:
     var saludo = "Hola ";
-    return saludo.concat(nombre, "¡");
+    return saludo.concat(nombre, "!");
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -259,9 +253,9 @@ function retornarPerimetro(lado) {
 function areaDelTriangulo(base, altura) {
     //Desarrolle una función que calcule el área de un triángulo.
     //Escribe tu código aquí
-    var repuesta = 0;
+    var respuesta = 0;
     respuesta = (base * altura) / 2;
-    return repuesta;
+    return respuesta;
 }
 
 
@@ -269,9 +263,9 @@ function deEuroAdolar(euro) {
     //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
     //como parámetro un número de euros y calcule el cambio en dólares.
     //Escribe tu código aquí
-    var repuesta = 0;
+    var respuesta = 0;
     respuesta = euro * 1.20;
-    return repuesta;
+    return respuesta;
 }
 
 
@@ -281,18 +275,15 @@ function esVocal(letra) {
     //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
     // Si no es vocal, tambien debe devolver "Dato incorrecto".
     //Escribe tu código aquí
-    var respuesta = "No Es vocal";
-    var vocales = new Array["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
-    if ((letra.length < 2) && (letras != null)) {
-        for (i = 0; vocales.length < 10; i++) {
-            if (vocales[i] == letra) {
-                respuesta = "Es vocal";
-                return respuesta;
-            }
+    var respuesta = "Dato incorrecto";
+    if (letra.length < 2) {
+        if (["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"].includes(letra)) {
+            respuesta = "Es vocal"
+            return respuesta;
+        } else {
+            respuesta = "No es vocal";
         }
-        return respuesta;
     }
-    respuesta = "Dato incorrecto";
     return respuesta;
 }
 
